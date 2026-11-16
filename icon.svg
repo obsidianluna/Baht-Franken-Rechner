@@ -1,1 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><radialGradient id="bg"><stop stop-color="#360620"/><stop offset=".7" stop-color="#160511"/><stop offset="1" stop-color="#070309"/></radialGradient><linearGradient id="pink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff1fb"/><stop offset=".22" stop-color="#ff8cd3"/><stop offset=".56" stop-color="#ff007c"/><stop offset="1" stop-color="#8b004f"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><pattern id="damask" width="76" height="95" patternUnits="userSpaceOnUse"><path d="M38 6C12 29 12 51 38 81C64 51 64 29 38 6ZM38 18C27 34 27 49 38 65C49 49 49 34 38 18Z" fill="none" stroke="#5c113d" stroke-width="2" opacity=".33"/></pattern></defs><rect width="512" height="512" rx="106" fill="url(#bg)"/><rect width="512" height="512" rx="106" fill="url(#damask)"/><rect x="18" y="18" width="476" height="476" rx="94" fill="none" stroke="#ff72c2" stroke-width="7" opacity=".65" filter="url(#glow)"/><circle cx="256" cy="260" r="207" fill="none" stroke="#ff74bd" stroke-width="4" filter="url(#glow)"/><circle cx="256" cy="260" r="195" fill="none" stroke="#f3b4e1" stroke-width="1.4" opacity=".8"/><g fill="#fff0fa" filter="url(#glow)"><path d="M256 39l8 18-8 18-8-18zM256 445l8 18-8 18-8-18zM35 260l18-8 18 8-18 8zM441 260l18-8 18 8-18 8z"/></g><g fill="none" stroke="#fa65b7" stroke-width="5" filter="url(#glow)"><path d="M256 211C227 174 214 156 184 169c-30 13-32 47-60 41 23-18 13-41 43-64 33-25 65-7 89 25 24-32 56-50 89-25 30 23 20 46 43 64-28 6-30-28-60-41-30-13-43 5-72 42Z"/><path d="M256 174c-20-29-11-54 0-68 11 14 20 39 0 68ZM195 195c-33 1-47-15-56-30 25-5 48 6 56 30ZM317 195c33 1 47-15 56-30-25-5-48 6-56 30Z"/></g><path d="M256 90l10 15-10 15-10-15Z" fill="#ffb4e0" filter="url(#glow)"/><rect x="86" y="243" width="139" height="111" rx="23" fill="#380e2b" stroke="#f57ac1" stroke-width="3"/><rect x="286" y="243" width="139" height="111" rx="23" fill="#380e2b" stroke="#f57ac1" stroke-width="3"/><text x="155" y="326" fill="#ffe2f5" font-family="Georgia,serif" font-size="75" text-anchor="middle" filter="url(#glow)">฿</text><text x="355" y="316" fill="#ffe2f5" font-family="Georgia,serif" font-size="46" text-anchor="middle" filter="url(#glow)">CHF</text><path d="M236 279h38l-12-11m12 11-12 11M276 322h-38l12-11m-12 11 12 11" fill="none" stroke="#ff70bf" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/><path d="M256 391c-14-27-39-30-47-12-9 22 27 44 47 59 20-15 56-37 47-59-8-18-33-15-47 12Z" fill="#ff0b8d" filter="url(#glow)"/><g fill="none" stroke="#f73d9f" stroke-width="4" opacity=".85" filter="url(#glow)"><path d="M73 145q-34 34 2 62q-12-33 16-39M439 145q34 34-2 62q12-33-16-39M73 377q-34-34 2-62q-12 33 16 39M439 377q34-34-2-62q12 33-16 39"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+<radialGradient id="bg"><stop stop-color="#3b092c"/><stop offset=".7" stop-color="#1a061a"/><stop offset="1" stop-color="#08020a"/></radialGradient>
+<linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0fc"/><stop offset=".25" stop-color="#ff7ad2"/><stop offset=".55" stop-color="#f50089"/><stop offset=".85" stop-color="#a9007e"/><stop offset="1" stop-color="#ffe0f7"/></linearGradient>
+<linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#84245f"/><stop offset=".35" stop-color="#3d103a"/><stop offset=".8" stop-color="#1b071e"/><stop offset="1" stop-color="#710b5a"/></linearGradient>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<pattern id="damask" width="80" height="92" patternUnits="userSpaceOnUse"><path d="M40 6Q5 34 40 82Q75 34 40 6ZM40 22Q25 42 40 62Q55 42 40 22Z" stroke="#9c286e" stroke-width="1.5" fill="none" opacity=".3"/></pattern>
+<g id="scroll" fill="none" stroke="url(#metal)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M0 0C-19-20-42-10-41 7C-39 20-19 20-17 5C-14-15-55-36-82-10C-97 5-87 34-67 29C-53 26-54 13-65 13"/>
+<path d="M-12 2C-38 30-20 52-2 40C10 32 2 20-9 25M-48-5C-72-45-110-32-108-8"/>
+<path d="M-27 16C-50 11-56 45-39 50M-70-7Q-90-32-106-18"/>
+</g>
+<g id="lotus" fill="url(#metal)" stroke="#ffc4ec" stroke-width="2">
+<path d="M0 0C-27-26-21-57 0-85C21-57 27-26 0 0Z"/>
+<path d="M0 1C-47-5-66-29-59-61C-25-55-6-33 0 1Z"/>
+<path d="M0 1C47-5 66-29 59-61C25-55 6-33 0 1Z"/>
+<path d="M0 6C-46 18-76 6-84-22C-45-29-18-12 0 6Z"/>
+<path d="M0 6C46 18 76 6 84-22C45-29 18-12 0 6Z"/>
+</g>
+</defs>
+<rect width="512" height="512" rx="105" fill="url(#bg)"/>
+<rect width="512" height="512" rx="105" fill="url(#damask)"/>
+<rect x="13" y="13" width="486" height="486" rx="94" stroke="#ff77d5" stroke-width="8" fill="none" filter="url(#glow)"/>
+<rect x="24" y="24" width="464" height="464" rx="85" stroke="#fca5e6" stroke-width="2" fill="none"/>
+<g filter="url(#glow)">
+<path d="M256 34C229 70 226 88 256 121C286 88 283 70 256 34Z" fill="url(#metal)" stroke="#ffd6f5" stroke-width="2"/>
+<path d="M256 48C248 69 249 85 256 98C263 85 264 69 256 48Z" fill="#7a155f"/>
+<g transform="translate(256 192) scale(1.18)"><use href="#lotus"/></g>
+<g transform="translate(256 470) scale(.85 -0.85)"><use href="#lotus"/></g>
+<g transform="translate(165 171) scale(.85)"><use href="#scroll"/></g>
+<g transform="translate(347 171) scale(-.85 .85)"><use href="#scroll"/></g>
+<g transform="translate(165 376) scale(.85 -.85)"><use href="#scroll"/></g>
+<g transform="translate(347 376) scale(-.85 -.85)"><use href="#scroll"/></g>
+</g>
+<rect x="64" y="220" width="171" height="137" rx="28" fill="url(#glass)" stroke="url(#metal)" stroke-width="7" filter="url(#glow)"/>
+<rect x="277" y="220" width="171" height="137" rx="28" fill="url(#glass)" stroke="url(#metal)" stroke-width="7" filter="url(#glow)"/>
+<path d="M82 240Q140 219 217 241M296 240Q357 219 429 241" fill="none" stroke="#fff0ff" stroke-width="4" opacity=".55"/>
+<g font-family="Georgia,serif" fill="#ffe5fa" text-anchor="middle" filter="url(#glow)">
+<text x="149" y="323" font-size="91">฿</text>
+<text x="363" y="310" font-size="57">CHF</text>
+</g>
+<g fill="none" stroke="url(#metal)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+<path d="M239 260Q256 245 271 261L262 252M271 261L261 267"/>
+<path d="M273 321Q255 336 239 321L249 330M239 321L250 315"/>
+</g>
+<g fill="url(#metal)" stroke="#ffd7f5" stroke-width="1.5" filter="url(#glow)">
+<path d="M256 205l10 13-10 13-10-13Z"/>
+<path d="M256 359l10 13-10 13-10-13Z"/>
+<path d="M38 258l12 15-12 15-12-15Z"/>
+<path d="M474 258l12 15-12 15-12-15Z"/>
+</g>
+</svg>
