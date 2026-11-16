@@ -19,10 +19,15 @@ input{width:100%;min-width:0;background:none;border:0;outline:0;color:#fff;font-
 .presets{display:flex;gap:8px;margin:16px 0 25px}.presets button{flex:1;border:1px solid #ba5a9a;background:linear-gradient(180deg,#4b173c,#250c25);color:#ffeaf6;border-radius:11px;padding:10px 3px;font-weight:650}
 .ratebox{border-top:1px solid #60466a;padding-top:19px}.ratehead{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px}.ratehead label{margin:0}.rateinput{padding:10px 12px}.rateinput input{font-size:17px}.status{font-size:12px;color:#bba9c2;margin-top:10px;min-height:18px}.refresh{background:none;border:0;color:#ff92d0;text-decoration:underline;padding:0;font-size:12px}
 footer{font-size:11px;color:#b996ae;text-align:center;margin-top:23px;line-height:1.5}
-main:before{content:'✦';position:absolute;right:23px;top:17px;font-size:18px;color:#ffb8e4;text-shadow:0 0 12px #ff1a9a}main:after{content:'';pointer-events:none;position:absolute;inset:0;opacity:.09;background:repeating-radial-gradient(ellipse at 50% 0%,transparent 0 25px,#ed4598 26px 27px,transparent 28px 58px)}main>*{position:relative;z-index:1}.brand:before{content:'✧ ';color:#ff69bb}.amount{text-shadow:0 0 14px #ff2e9d66}.presets button:active{transform:scale(.96);background:#6e2150}input:focus{filter:drop-shadow(0 0 5px #ff329a66)}
+main:before{content:'❖';position:absolute;right:23px;top:17px;font-size:18px;color:#ffb8e4;text-shadow:0 0 12px #ff1a9a}main:after{content:'';pointer-events:none;position:absolute;inset:0;opacity:.09;background:repeating-radial-gradient(ellipse at 50% 0%,transparent 0 25px,#ed4598 26px 27px,transparent 28px 58px)}main>*{position:relative;z-index:1}.brand:before{content:'✧ ';color:#ff69bb}.amount{text-shadow:0 0 14px #ff2e9d66}.presets button:active{transform:scale(.96);background:#6e2150}input:focus{filter:drop-shadow(0 0 5px #ff329a66)}
+main{background-image:radial-gradient(ellipse at 50% -20%,#5a1039a8,transparent 55%),repeating-linear-gradient(45deg,transparent 0 34px,#ff25820b 35px 36px,transparent 37px 70px),linear-gradient(155deg,#290b22f2,#130715f7)}
+main:after{content:'';position:absolute;inset:10px;border:1px solid #ff69b555;border-radius:22px;pointer-events:none;background:none;opacity:1}
+.brand{text-align:center;letter-spacing:.24em}.brand:after{content:' ✧';color:#ff69bb}
+h1{text-align:center}.sub{text-align:center}.result{position:relative}.result:before,.result:after{content:'❧';position:absolute;top:8px;color:#ff8ecf;font-size:20px;text-shadow:0 0 9px #ff0a8d}.result:before{left:12px}.result:after{right:12px;transform:scaleX(-1)}
+.ratebox{border-top:1px solid #db589f}.field:focus-within{border-color:#ff92ce;box-shadow:0 0 13px #ff008044}
 </style></head>
 <body><main>
-<div class="brand">Amy Supreme · Travel Tools</div><h1>Baht &amp; Franken</h1><p class="sub">Thailand im Blick. Franken im Gefühl.</p>
+<div class="brand">✦ Währungsrechner ✦</div><h1>Baht &amp; Franken</h1><p class="sub">Thai Baht ↔ Schweizer Franken</p>
 <label for="thb">Betrag in Thai Baht</label><div class="field"><input id="thb" type="number" inputmode="decimal" min="0" step="any" value="1000"><span class="currency">THB</span></div>
 <div class="result"><small>Dein Betrag in Schweizer Franken</small><div class="amount" id="chf">– <span>CHF</span></div></div>
 <div class="presets"><button data-v="100">100</button><button data-v="500">500</button><button data-v="1000">1’000</button><button data-v="5000">5’000</button></div>
