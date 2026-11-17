@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+<radialGradient id="bg"><stop stop-color="#3b092c"/><stop offset=".7" stop-color="#1a061a"/><stop offset="1" stop-color="#08020a"/></radialGradient>
+<linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff5e7"/><stop offset=".25" stop-color="#ffc45e"/><stop offset=".55" stop-color="#f50089"/><stop offset=".85" stop-color="#b66a23"/><stop offset="1" stop-color="#fff1ce"/></linearGradient>
+<linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#84245f"/><stop offset=".35" stop-color="#3d103a"/><stop offset=".8" stop-color="#1b071e"/><stop offset="1" stop-color="#710b5a"/></linearGradient>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<pattern id="damask" width="80" height="92" patternUnits="userSpaceOnUse"><path d="M40 6Q5 34 40 82Q75 34 40 6ZM40 22Q25 42 40 62Q55 42 40 22Z" stroke="#9c286e" stroke-width="1.5" fill="none" opacity=".3"/></pattern>
+<g id="scroll" fill="none" stroke="url(#metal)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M0 0C-19-20-42-10-41 7C-39 20-19 20-17 5C-14-15-55-36-82-10C-97 5-87 34-67 29C-53 26-54 13-65 13"/>
+<path d="M-12 2C-38 30-20 52-2 40C10 32 2 20-9 25M-48-5C-72-45-110-32-108-8"/>
+<path d="M-27 16C-50 11-56 45-39 50M-70-7Q-90-32-106-18"/>
+</g>
+<g id="lotus" fill="url(#metal)" stroke="#ffd18d" stroke-width="2">
+<path d="M0 0C-27-26-21-57 0-85C21-57 27-26 0 0Z"/>
+<path d="M0 1C-47-5-66-29-59-61C-25-55-6-33 0 1Z"/>
+<path d="M0 1C47-5 66-29 59-61C25-55 6-33 0 1Z"/>
+<path d="M0 6C-46 18-76 6-84-22C-45-29-18-12 0 6Z"/>
+<path d="M0 6C46 18 76 6 84-22C45-29 18-12 0 6Z"/>
+</g>
+</defs>
+<rect width="512" height="512" rx="105" fill="url(#bg)"/>
+<rect width="512" height="512" rx="105" fill="url(#damask)"/>
+<rect x="13" y="13" width="486" height="486" rx="94" stroke="#64f7a6" stroke-width="8" fill="none" filter="url(#glow)"/>
+<rect x="24" y="24" width="464" height="464" rx="85" stroke="#fca5e6" stroke-width="2" fill="none"/>
+<g filter="url(#glow)">
+<path d="M256 34C229 70 226 88 256 121C286 88 283 70 256 34Z" fill="url(#metal)" stroke="#ffd6f5" stroke-width="2"/>
+<path d="M256 48C248 69 249 85 256 98C263 85 264 69 256 48Z" fill="#7a155f"/>
+<g transform="translate(256 192) scale(1.18)"><use href="#lotus"/></g>
+<g transform="translate(256 470) scale(.85 -0.85)"><use href="#lotus"/></g>
+<g transform="translate(165 171) scale(.85)"><use href="#scroll"/></g>
+<g transform="translate(347 171) scale(-.85 .85)"><use href="#scroll"/></g>
+<g transform="translate(165 376) scale(.85 -.85)"><use href="#scroll"/></g>
+<g transform="translate(347 376) scale(-.85 -.85)"><use href="#scroll"/></g>
+</g>
+<rect x="64" y="220" width="171" height="137" rx="28" fill="url(#glass)" stroke="url(#metal)" stroke-width="7" filter="url(#glow)"/>
+<rect x="277" y="220" width="171" height="137" rx="28" fill="url(#glass)" stroke="url(#metal)" stroke-width="7" filter="url(#glow)"/>
+<path d="M82 240Q140 219 217 241M296 240Q357 219 429 241" fill="none" stroke="#fff0ff" stroke-width="4" opacity=".55"/>
+<g font-family="Georgia,serif" fill="#ffe5fa" text-anchor="middle" filter="url(#glow)">
+<text x="149" y="323" font-size="91">Ft</text>
+<text x="363" y="310" font-size="57">CHF</text>
+</g>
+<g fill="none" stroke="url(#metal)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+<path d="M239 260Q256 245 271 261L262 252M271 261L261 267"/>
+<path d="M273 321Q255 336 239 321L249 330M239 321L250 315"/>
+</g>
+<g fill="url(#metal)" stroke="#ffd7f5" stroke-width="1.5" filter="url(#glow)">
+<path d="M256 205l10 13-10 13-10-13Z"/>
+<path d="M256 359l10 13-10 13-10-13Z"/>
+<path d="M38 258l12 15-12 15-12-15Z"/>
+<path d="M474 258l12 15-12 15-12-15Z"/>
+</g>
+</svg>

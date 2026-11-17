@@ -1,0 +1,17 @@
+{
+  "name": "Yuan Franken Rechner",
+  "short_name": "CNY→CHF",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#071b39",
+  "theme_color": "#113d83",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

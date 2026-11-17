@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#180d20"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icon.svg">
+<title>Forint → Franken</title>
+<style>
+/* Ornamental glass edition */
+
+:root{color-scheme:dark;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#030e08;color:#fff0fa}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse at 50% 0%,#10482a 0,#092619 42%,#030d08 100%)}
+main{width:min(100%,440px);padding:28px 23px 24px;border:1px solid #40d68b9e;border-radius:28px;background:linear-gradient(155deg,#123d2bf2,#061b14f7);box-shadow:0 0 30px #28e57d2c,0 24px 80px #000b;position:relative;overflow:hidden}
+.brand{color:#8cf5ba;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700}h1{font-family:Georgia,serif;font-size:27px;margin:10px 0 5px;color:#e0ffed;text-shadow:0 0 15px #28e57d78}.sub{color:#a3c9b2;font-size:14px;margin:0 0 28px}
+label{display:block;color:#c1ead2;font-size:13px;margin:0 0 8px}.field{background:#071d15;border:1px solid #348f65;border-radius:15px;padding:15px 16px;display:flex;align-items:center;gap:10px}
+input{width:100%;min-width:0;background:none;border:0;outline:0;color:#fff;font-size:27px;font-weight:650;font-variant-numeric:tabular-nums}input::-webkit-inner-spin-button{display:none}.currency{font-size:14px;color:#7df2b0;font-weight:700}
+.result{margin-top:16px;padding:20px 17px;border-radius:18px;background:linear-gradient(135deg,#145a37,#0c3323);border:1px solid #56e89b9c;box-shadow:inset 0 1px 0 #ffb8e233,0 0 23px #28e57d2b}
+.result small{color:#a5ffd1}.amount{font-size:38px;font-weight:750;letter-spacing:-1px;margin-top:6px;font-variant-numeric:tabular-nums}.amount span{font-size:17px;color:#b3eacb}
+.presets{display:flex;gap:8px;margin:16px 0 25px}.presets button{flex:1;border:1px solid #329c67;background:linear-gradient(180deg,#1d6041,#0c3022);color:#ecfff4;border-radius:11px;padding:10px 3px;font-weight:650}
+.ratebox{border-top:1px solid #366c52;padding-top:19px}.ratehead{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px}.ratehead label{margin:0}.rateinput{padding:10px 12px}.rateinput input{font-size:17px}.status{font-size:12px;color:#a5c3b0;margin-top:10px;min-height:18px}.refresh{background:none;border:0;color:#81f3b4;text-decoration:underline;padding:0;font-size:12px}
+footer{font-size:11px;color:#93b6a1;text-align:center;margin-top:23px;line-height:1.5}
+main:before{content:'❖';position:absolute;right:23px;top:17px;font-size:18px;color:#b8ffd5;text-shadow:0 0 12px #37e68c}main:after{content:'';pointer-events:none;position:absolute;inset:0;opacity:.09;background:repeating-radial-gradient(ellipse at 50% 0%,transparent 0 25px,#3caf74 26px 27px,transparent 28px 58px)}main>*{position:relative;z-index:1}.brand:before{content:'✧ ';color:#ff69bb}.amount{text-shadow:0 0 14px #3bf18e66}.presets button:active{transform:scale(.96);background:#28794e}input:focus{filter:drop-shadow(0 0 5px #3de88966)}
+main{background-image:radial-gradient(ellipse at 50% -20%,#5a1039a8,transparent 55%),repeating-linear-gradient(45deg,transparent 0 34px,#34ce7d0b 35px 36px,transparent 37px 70px),linear-gradient(155deg,#123d2bf2,#061b14f7)}
+main:after{content:'';position:absolute;inset:10px;border:1px solid #6cf5a655;border-radius:22px;pointer-events:none;background:none;opacity:1}
+.brand{text-align:center;letter-spacing:.24em}.brand:after{content:' ✧';color:#ff69bb}
+h1{text-align:center}.sub{text-align:center}.result{position:relative}.result:before,.result:after{content:'❧';position:absolute;top:8px;color:#9cfac1;font-size:20px;text-shadow:0 0 9px #2add80}.result:before{left:12px}.result:after{right:12px;transform:scaleX(-1)}
+.ratebox{border-top:1px solid #4fbf87}.field:focus-within{border-color:#8afac0;box-shadow:0 0 13px #28e57d44}
+</style></head>
+<body><main>
+<div class="brand">✦ Währungsrechner ✦</div><h1>Forint &amp; Franken</h1><p class="sub">Ungarische Forint ↔ Schweizer Franken</p>
+<label for="huf">Betrag in Ungarischen Forint</label><div class="field"><input id="huf" type="number" inputmode="decimal" min="0" step="any" value="10000"><span class="currency">HUF</span></div>
+<div class="result"><small>Dein Betrag in Schweizer Franken</small><div class="amount" id="chf">– <span>CHF</span></div></div>
+<div class="presets"><button data-v="1000">1'000</button><button data-v="5000">5'000</button><button data-v="10000">10'000</button><button data-v="50000">50'000</button></div>
+<div class="ratebox"><div class="ratehead"><label for="rate">Wechselkurs (1 HUF in CHF)</label><button class="refresh" id="refresh">Kurs aktualisieren</button></div>
+<div class="field rateinput"><input id="rate" type="number" inputmode="decimal" step="any" value="0.0023"><span class="currency">CHF</span></div>
+<div class="status" id="status" aria-live="polite">Starte…</div></div>
+<footer>Referenzkurs automatisch laden · Kurs manuell anpassbar<br>Der angezeigte Kurs ist ein Richtwert, Bankgebühren können abweichen.</footer>
+</main>
+<script>
+const amount=document.querySelector('#huf'), rate=document.querySelector('#rate'), output=document.querySelector('#chf'), status=document.querySelector('#status');
+const fmt=new Intl.NumberFormat('de-CH',{minimumFractionDigits:2,maximumFractionDigits:2});
+function calc(){const a=Number(amount.value),r=Number(rate.value);output.innerHTML=(Number.isFinite(a)&&Number.isFinite(r)&&r>0?fmt.format(a*r):'–')+' <span>CHF</span>'}
+amount.addEventListener('input',calc);rate.addEventListener('input',()=>{calc();localStorage.setItem('manualRate',rate.value)});
+document.querySelectorAll('[data-v]').forEach(b=>b.addEventListener('click',()=>{amount.value=b.dataset.v;calc()}));
+async function updateRate(){status.textContent='Lade aktuellen Referenzkurs…';try{const res=await fetch('https://api.frankfurter.dev/v1/latest?base=HUF&symbols=CHF',{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);const data=await res.json();const r=data.rates.CHF;if(!(r>0))throw Error('Kurs fehlt');rate.value=String(r);localStorage.setItem('cachedRate',String(r));localStorage.setItem('cachedDate',data.date);localStorage.removeItem('manualRate');status.textContent='Aktueller Referenzkurs vom '+data.date;calc()}catch(e){const cached=localStorage.getItem('cachedRate');if(cached&&!localStorage.getItem('manualRate'))rate.value=cached;status.textContent=localStorage.getItem('manualRate')?'Manuell eingestellter Kurs aktiv.':'Offline: gespeicherter Kurs vom '+(localStorage.getItem('cachedDate')||'letzten Abruf')+'.';calc()}}
+const manual=localStorage.getItem('manualRate');if(manual)rate.value=manual;calc();updateRate();document.querySelector('#refresh').addEventListener('click',updateRate);
+if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+</script></body></html>
